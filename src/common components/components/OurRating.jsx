@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
 
-function OurRating() {
+function OurRating({paddingBottom}) {
   const divRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
 
@@ -27,7 +27,7 @@ function OurRating() {
   }, [divRef]);
 
   return (
-    <div className="mt-24 ">
+    <div className={`mt-24 ${paddingBottom}`}>
       <div className="h-60 px-8 xl:px-24 2xl:px-48">
         <div
           className="border-t border-black grid md:grid-cols-2 lg:grid-cols-3 2xl:gap-16 2xl:px-14 py-14"

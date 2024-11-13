@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [stickyNav, setStickyNav] = useState(false);
@@ -22,13 +23,13 @@ function Navbar() {
   }, []);
 
   const navlinks = [
-    { link: "Home" },
-    { link: "About" },
-    { link: "Our Rooms" },
-    { link: "Pages" },
-    { link: "Facilities" },
-    { link: "Blog" },
-    { link: "Contact Us" },
+    { link: "Home" , path: '/'},
+    { link: "About" , path:'about'},
+    { link: "Our Rooms" ,path:''},
+    { link: "Pages" ,path:''},
+    { link: "Facilities" ,path:''},
+    { link: "Blog", path:'blog' },
+    { link: "Contact Us" ,path:''},
   ];
   return (
     <header
@@ -47,7 +48,7 @@ function Navbar() {
           <div className="lg:flex gap-7 2xl:gap-10 hidden">
             {navlinks.map((navlink, index) => (
               <h1 className="text-lg font-firsSans" key={index}>
-                {navlink.link}
+               <Link to={navlink.path}>{navlink.link}</Link>
               </h1>
             ))}
           </div>
@@ -71,9 +72,9 @@ function Navbar() {
         <div className={` lg:hidden transition-all px-4 md:px-10 ease-out duration-500 overflow-hidden text-black ${hamBurger ? 'max-h-96 ': 'max-h-0'}`}>
           <div className="w-full h-full bg-white p-8 pt-0 pb-0 shadow-lg border-b">
           {navlinks.map((navlink, index) => (
-                <div className=" border-t py-2 sm:py-3 ">
-                  <h1 className="text-lg font-firsSans" key={index}>
-                  {navlink.link}
+                <div className=" border-t py-2 sm:py-3 "  key={index} >
+                  <h1 className={`text-lg font-firsSans`}>
+                  <Link to={navlink.path}>{navlink.link}</Link>
                   </h1>
                 </div>
               ))}

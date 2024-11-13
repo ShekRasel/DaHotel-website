@@ -1,14 +1,14 @@
 import React from "react";
 import Hero from "../components/HomePageComponents/Hero";
 import FeatureSection from "../components/HomePageComponents/FeatureSection";
-import OurRating from "../components/HomePageComponents/OurRating";
 import HotelFeatures from "../components/HomePageComponents/HotelFeatures";
-import Animate from "../components/HomePageComponents/Animate";
 import PricingPlan from "../components/HomePageComponents/PricingPlan";
 import BookPlane from "../components/HomePageComponents/BookPlane";
-import Photoshot from "../components/HomePageComponents/Photoshot";
-import HotelImages from "../components/HomePageComponents/HotelImages";
+import HotelImages from "../common components/components/HotelImages";
 import CompanyBlog from "../components/HomePageComponents/CompanyBlog";
+import OurRating from '../common components/components/OurRating'
+import Photoshot from "../components/HomePageComponents/Photoshot";
+import Animate from "../common components/components/Animate";
 
 function Home() {
   return (
@@ -17,10 +17,10 @@ function Home() {
       <FeatureSection />
       <OurRating />
       <HotelFeatures />
-      <Animate />
+      <Animate/>
       <PricingPlan />
       <BookPlane />
-      <Photoshot />
+      <Photoshot/>
       <HotelImages />
       <CompanyBlog />
       
