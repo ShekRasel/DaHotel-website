@@ -5,6 +5,7 @@ import './index.css'
 import About from './pages/About.jsx'
 import Home from './pages/Home.jsx'
 import AppLayout from './common components/AppLayout/AppLayout.jsx'
+import OurRooms from './pages/OurRooms.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const routes = createBrowserRouter([
       {
         path:'/about',
         element:<About/>
+      },
+      {
+        path:'/ourrooms',
+        element:<OurRooms/>
       }
     ]
   },

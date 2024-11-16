@@ -25,7 +25,7 @@ function Navbar() {
   const navlinks = [
     { link: "Home" , path: '/'},
     { link: "About" , path:'about'},
-    { link: "Our Rooms" ,path:''},
+    { link: "Our Rooms" ,path:'ourrooms'},
     { link: "Pages" ,path:''},
     { link: "Facilities" ,path:''},
     { link: "Blog", path:'blog' },
