@@ -30,7 +30,7 @@ function Navbar() {
     { link: "Pages" },
     { link: "Facilities", path: "" },
     { link: "Blog", path: "" },
-    { link: "Contact Us", path: "" },
+    { link: "Contact Us", path: "contact" },
   ];
   return (
     <header

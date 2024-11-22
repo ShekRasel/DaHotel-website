@@ -6,6 +6,7 @@ import About from './pages/About.jsx'
 import Home from './pages/Home.jsx'
 import AppLayout from './common components/AppLayout/AppLayout.jsx'
 import OurRooms from './pages/OurRooms.jsx'
+import Contact from './pages/Contact.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const routes = createBrowserRouter([
       {
         path:'/ourrooms',
         element:<OurRooms/>
+      },
+      {
+        path:'/contact',
+        element:<Contact/>
       }
     ]
   },
