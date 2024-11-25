@@ -7,6 +7,12 @@ function Navbar() {
   const [stickyNav, setStickyNav] = useState(false);
   const [hamBurger, setHamburger] = useState(false);
   const [subMenu, setSubMenu] = useState();
+  const [mobileSubMenu , setMobileSubMenu] = useState(null);
+  
+
+  const openMobileSubMenu = (index) => {
+    setMobileSubMenu((prevIndex)=>(prevIndex === index ? null : index ));
+  }
 
   const afterScrollSticky = () => {
     if (window.scrollY >= 250) {
@@ -27,8 +33,8 @@ function Navbar() {
     { link: "Home", path: "/" },
     { link: "About", path: "about" },
     { link: "Our Rooms", path: "ourrooms" },
-    { link: "Pages" },
-    { link: "Facilities", path: "" },
+    { link: "Pages" , text : '+'},
+    { link: "Facilities", path: "", text : '+' },
     { link: "Blog", path: "blogs" },
     { link: "Contact Us", path: "contact" },
   ];
@@ -74,7 +80,7 @@ function Navbar() {
                 {subMenu === 4 && (
                   <div
                     className=" absolute top-full cursor-pointer font-roboto tracking-wider text-xl  text-black left-1/3 "
-                    onMouseEnter={() => setSubMenu(4)} 
+                    onMouseEnter={() => setSubMenu(4)}
                     onMouseLeave={() => setSubMenu(null)}
                   >
                     <div className="bg-white rounded-sm py-4 mt-7">
@@ -103,16 +109,41 @@ function Navbar() {
 
       <div
         className={` lg:hidden transition-all px-4 md:px-10 ease-out duration-500 overflow-hidden text-black ${
-          hamBurger ? "max-h-96 " : "max-h-0"
+          hamBurger ? "max-h-[500px] " : "max-h-0"
         }`}
       >
         <div className="w-full h-full bg-white p-8 pt-0 pb-0 shadow-lg border-b">
           {navlinks.map((navlink, index) => (
-            <div className=" border-t py-2 sm:py-3 " key={index}>
+            <div className=" border-t py-2 sm:py-3 " key={index} onClick={()=>openMobileSubMenu(index)}>
+              <div className="flex justify-between">
+
               <h1 className={`text-lg font-firsSans`}>
                 <Link to={navlink.path}>{navlink.link}</Link>
               </h1>
+              <h1 className="font-bold">{navlink.text}</h1>
+              </div>
+
+
+               <div className={`${
+              mobileSubMenu === index ? "max-h-40" : "max-h-0"
+            } transition-all ease-out duration-500 overflow-hidden`}>
+                <div>
+                  {navlink.link === 'Pages' && <div className="font-bold text-gray-500 flex flex-col gap-2 font-roboto py-2 px-10">
+                      <h1>GALLERY</h1>
+                      <h1>OUR TEAM </h1>
+                      <h1>PRICING</h1>
+                      <h1>FAQ</h1>
+                    </div>}
+
+                    {navlink.link === 'Facilities' && <div className="font-bold text-gray-500 flex flex-col gap-2 font-roboto py-2 px-10">
+                      <h1>OUR SERVICES</h1>
+                      <h1>SERVICES DETAILS</h1>
+                    </div>}
+                </div>
+              </div>
+                          
             </div>
+
           ))}
         </div>
       </div>
