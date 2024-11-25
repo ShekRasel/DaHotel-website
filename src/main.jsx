@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx'
 import AppLayout from './common components/AppLayout/AppLayout.jsx'
 import OurRooms from './pages/OurRooms.jsx'
 import Contact from './pages/Contact.jsx'
+import Blog from './pages/Blog.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const routes = createBrowserRouter([
       {
         path:'/contact',
         element:<Contact/>
+      },
+      {
+        path : 'blogs',
+        element: <Blog/>
       }
     ]
   },

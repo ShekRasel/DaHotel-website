@@ -29,7 +29,7 @@ function Navbar() {
     { link: "Our Rooms", path: "ourrooms" },
     { link: "Pages" },
     { link: "Facilities", path: "" },
-    { link: "Blog", path: "" },
+    { link: "Blog", path: "blogs" },
     { link: "Contact Us", path: "contact" },
   ];
   return (
