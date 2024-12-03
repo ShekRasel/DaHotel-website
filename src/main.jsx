@@ -10,6 +10,7 @@ import Contact from './pages/Contact.jsx'
 import Blog from './pages/Blog.jsx'
 import Gallery from './pages/Gallery.jsx'
 import OurTeam from './pages/OurTeam.jsx'
+import Price from './pages/Price.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const routes = createBrowserRouter([
       {
         path : 'team',
         element : <OurTeam/>
+      },
+      {
+        path: 'price',
+        element : <Price/>
       }
     ]
   },

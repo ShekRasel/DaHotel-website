@@ -1,6 +1,6 @@
 import React from "react";
 
-function PricingPlan() {
+function PricingPlan({price,price1,head}) {
   const prices = [
     {
       img: "images/room1.avif",
@@ -20,8 +20,8 @@ function PricingPlan() {
   ];
   return (
     <div className="px-4 md:px-10 2xl:px-64 mt-24">
-      <h2 className="font-roboto text-gray-500 text-xl text-center">OUR PLANS</h2>
-      <h1 className="text-[#2C4549] font-semibold text-4xl lg:text-6xl text-center mt-6 font-roboto">Our pricing & plans</h1>
+      <h2 className="font-roboto text-gray-500 text-xl text-center">{price1}{price}</h2>
+      <h1 className="text-[#2C4549] font-semibold text-4xl lg:text-6xl text-center mt-6 font-roboto">{head}</h1>
       <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {prices.map((price, index) => (
           <div className=" pb-14 flex flex-col items-center shadow-md font-roboto tracking-wider" key={index}>

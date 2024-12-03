@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/HomePageComponents/Hero";
 import FeatureSection from "../components/HomePageComponents/FeatureSection";
 import HotelFeatures from "../components/HomePageComponents/HotelFeatures";
-import PricingPlan from "../components/HomePageComponents/PricingPlan";
+import PricingPlan from "../common components/components/PricingPlan";
 import BookPlane from "../components/HomePageComponents/BookPlane";
 import HotelImages from "../common components/components/HotelImages";
 import CompanyBlog from "../components/HomePageComponents/CompanyBlog";
@@ -18,7 +18,7 @@ function Home() {
       <OurRating />
       <HotelFeatures />
       <Animate/>
-      <PricingPlan />
+      <PricingPlan price1='OUR PLANS' head='Our Pricing & plans'/>
       <BookPlane />
       <Photoshot/>
       <HotelImages />

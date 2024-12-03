@@ -72,7 +72,7 @@ function Navbar() {
                     <div className="bg-white rounded-sm py-4 mt-7">
                       <h1 className="pr-36 px-6 py-4"><Link to={'/gallery'}>Gallary</Link></h1>
                       <h1 className="pr-36 px-6 py-4 border-t"><Link to={'/team'}>Our Team</Link></h1>
-                      <h1 className="border-t  px-6 py-4 ">Pricing</h1>
+                      <h1 className="pr-36 px-6 py-4 border-t"><Link to={'/price'}>Pricing</Link></h1>
                       <h1 className="border-t  px-6 py-4">FAQ</h1>
                     </div>
                   </div>
