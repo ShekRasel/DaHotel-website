@@ -2,7 +2,7 @@ import React from "react";
 import topBanner from "../../../public/hotel images/topbanner.avif";
 import { Link } from 'react-router-dom';
 
-function TopBanner({ About, OurRooms,contact,blog,gallery,ourteam,pricing }) {
+function TopBanner({ About, OurRooms,contact,blog,gallery,ourteam,pricing,faq}) {
   return (
     <div
       className="flex bg-gray-500 justify-center items-center min-h-[200px] mt-16 xl:min-h-[400px] 2xl:min-h-[500px] tracking-wide bg-cover bg-center bg-no-repeat"
@@ -17,6 +17,7 @@ function TopBanner({ About, OurRooms,contact,blog,gallery,ourteam,pricing }) {
           {gallery}
           {ourteam}
           {pricing}
+          {faq}
         </h1>
         <div className="flex text-2xl mt-8 gap-4">
           <Link to={'/'}><h1>Home</h1></Link>
@@ -29,6 +30,7 @@ function TopBanner({ About, OurRooms,contact,blog,gallery,ourteam,pricing }) {
             {gallery}
             {ourteam}
             {pricing}
+            {faq}
           </h1>
         </div>
       </div>

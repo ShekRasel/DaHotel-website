@@ -11,6 +11,7 @@ import Blog from './pages/Blog.jsx'
 import Gallery from './pages/Gallery.jsx'
 import OurTeam from './pages/OurTeam.jsx'
 import Price from './pages/Price.jsx'
+import Faq from './pages/Faq.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const routes = createBrowserRouter([
       {
         path: 'price',
         element : <Price/>
+      },
+      {
+        path: 'faq',
+        element: <Faq/>
       }
     ]
   },
