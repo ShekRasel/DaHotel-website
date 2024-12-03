@@ -8,6 +8,8 @@ import AppLayout from './common components/AppLayout/AppLayout.jsx'
 import OurRooms from './pages/OurRooms.jsx'
 import Contact from './pages/Contact.jsx'
 import Blog from './pages/Blog.jsx'
+import Gallery from './pages/Gallery.jsx'
+import OurTeam from './pages/OurTeam.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -33,6 +35,14 @@ const routes = createBrowserRouter([
       {
         path : 'blogs',
         element: <Blog/>
+      },
+      {
+        path : 'gallery',
+        element: <Gallery/>
+      },
+      {
+        path : 'team',
+        element : <OurTeam/>
       }
     ]
   },
