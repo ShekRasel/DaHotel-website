@@ -15,7 +15,7 @@ function OurRooms() {
       <BookPlane />
       <div className="  mt-24 flex flex-col  md:flex-row items-center xl:pr-24 2xl:pr-48 justify-between  gap-14 2xl:gap-24">
         <div className="md:w-1/2">
-          <img src="/public/images/pexels-photo-262047.jpeg" alt="" />
+          <img src="images/pexels-photo-262047.jpeg" alt="" />
         </div>
         <div className="font-roboto tracking-wide md:w-1/2">
           <h2 className="text-2xl font-semibold">Luxury Hotel& Resort</h2>

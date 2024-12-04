@@ -11,7 +11,7 @@ import { CiLinkedin } from "react-icons/ci";
 function Blog() {
   const BlogPost = [
     {
-      img: "/public/hotel images/blogImage1.avif",
+      img: "hotel images/blogImage1.avif",
       creator: "By Admin",
       date: "July 29,2024",
       coments: "No Comments",
@@ -21,7 +21,7 @@ function Blog() {
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labori",
     },
     {
-      img: "/public/hotel images/blogImage2.avif",
+      img: "hotel images/blogImage2.avif",
       creator: "By Admin",
       date: "July 10,2022",
       coments: "No Comments",
@@ -31,7 +31,7 @@ function Blog() {
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labori",
     },
     {
-      img: "/public/hotel images/blogImage3.avif",
+      img: "hotel images/blogImage3.avif",
       creator: "By Admin",
       date: "May 29,2024",
       coments: "No Comments",
@@ -108,7 +108,7 @@ function Blog() {
             </h1>
             <div className="flex gap-5 mt-4 border-b pb-4">
               <img
-                src="/public/hotel images/blogImage1.avif"
+                src="hotel images/blogImage1.avif"
                 alt=""
                 className="w-24 h-24"
               />
@@ -120,7 +120,7 @@ function Blog() {
             </div>
             <div className="flex gap-5 mt-4 border-b pb-4">
               <img
-                src="/public/hotel images/blogImage2.avif"
+                src="hotel images/blogImage2.avif"
                 alt=""
                 className="w-24 h-24"
               />
@@ -132,7 +132,7 @@ function Blog() {
             </div>
             <div className="flex gap-5 mt-4 border-b pb-4">
               <img
-                src="/public/hotel images/blogImage3.avif"
+                src="hotel images/blogImage3.avif"
                 alt=""
                 className="w-24 h-24"
               />
