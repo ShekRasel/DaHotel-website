@@ -12,6 +12,8 @@ import Gallery from './pages/Gallery.jsx'
 import OurTeam from './pages/OurTeam.jsx'
 import Price from './pages/Price.jsx'
 import Faq from './pages/Faq.jsx'
+import OurServices from './pages/OurServices.jsx'
+import ServiceDetails from './pages/ServiceDetails.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -53,6 +55,14 @@ const routes = createBrowserRouter([
       {
         path: 'faq',
         element: <Faq/>
+      },
+      {
+        path : 'services',
+        element : <OurServices/>
+      },
+      {
+        path : 'servicesDetails',
+        element : <ServiceDetails/>
       }
     ]
   },

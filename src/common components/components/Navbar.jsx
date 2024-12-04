@@ -84,8 +84,8 @@ function Navbar() {
                     onMouseLeave={() => setSubMenu(null)}
                   >
                     <div className="bg-white rounded-sm py-4 mt-7">
-                      <h1 className="pr-36 px-6 py-4">Our Services</h1>
-                      <h1 className="border-t  px-6 py-4">Services Details</h1>
+                    <h1 className="pr-36 px-6 py-4 "><Link to={'/services'}>OurServices</Link></h1>
+                    <h1 className="pr-36 px-6 py-4 border-t"><Link to={'/servicesDetails'}>Service Details</Link></h1>
                     </div>
                   </div>
                 )}
