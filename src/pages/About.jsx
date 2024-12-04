@@ -12,7 +12,7 @@ function About() {
         <div className='  mt-24 flex flex-col  md:flex-row  px-4 xl:px-24 2xl:px-48 justify-between  gap-14 2xl:gap-24'>
 
           <div className='md:w-1/2'>
-            <img src="/public/images/pexels-photo-262047.jpeg" alt="" />
+            <img src="images/pexels-photo-262047.jpeg" alt="" />
           </div>
           <div className='font-roboto tracking-wide md:w-1/2'>
             <h2>WHY CHOOSE US</h2>
