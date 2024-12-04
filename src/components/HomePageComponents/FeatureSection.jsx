@@ -1,6 +1,6 @@
 import React from 'react'
 
-function FeatureSection() {
+function FeatureSection({marginT}) {
     const features = [{
         icon: 'icons/fe-icon01.png',
         header: 'Restaurants',
@@ -32,7 +32,7 @@ function FeatureSection() {
   description:'Visitors to your city need to eat. In fact, some people visit new towns specifically for the food. Use your insider'
 },]
   return (
-    <div className='px-4 md:px-14 mt-[620px] lg:mt-0 lg:pt-52 lg:flex lg:px-8 xl:px-24 2xl:px-44 lg:gap-10 2xl:gap-28'>
+    <div className={`px-4 md:px-14 mt-[620px] ${marginT} lg:mt-0 lg:pt-52 lg:flex lg:px-8 xl:px-24 2xl:px-44 lg:gap-10 2xl:gap-28`}>
       <div className='flex flex-col items-center  lg:w-1/4 lg:sticky top-44 h-28'>
         <h2 className='text-[#848484]'>WHY CHOOSE US</h2>
         <h1 className='text-5xl text-[#2C4549] font-updock mt-4 xl:text-6xl text-center'>Why choose us</h1>

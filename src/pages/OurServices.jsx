@@ -9,7 +9,7 @@ function OurServices() {
   return (
     <div>
         <TopBanner ourService='Our Service'/>
-        <FeatureSection/>
+        <FeatureSection marginT= 'mt-[100px]'/>
         <BookPlane/>
         <Photoshot/>
         <HotelImages/>
