@@ -62,7 +62,7 @@ function OurRating({ paddingBottom }) {
     <div className={`mt-24 ${paddingBottom}`}>
       <div className="h-60 px-8 xl:px-24 2xl:px-48">
         <div
-          className="border border-black grid md:grid-cols-2 lg:grid-cols-3 2xl:gap-16 2xl:px-14 py-14"
+          className="border-t border-black grid md:grid-cols-2 lg:grid-cols-3 2xl:gap-16 2xl:px-14 py-14"
           ref={divRef}
         >
           {isInView && (
