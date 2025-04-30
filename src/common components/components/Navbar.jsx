@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
@@ -104,9 +104,11 @@ function Navbar() {
             ))}
           </div>
 
+          <Link to={'/ourrooms'}>
           <button className="bg-white text-black px-14 2xl:px-20 py-4 outline-none hover:bg-[#2C4549] hover:text-white ease-out transition-all duration-500 border text-lg hidden lg:block font-firsSans">
             RESERVATION
           </button>
+          </Link>
 
           {/*mobile nav start  */}
           <div

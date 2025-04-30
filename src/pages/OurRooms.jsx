@@ -1,17 +1,17 @@
-import React from "react";
 import TopBanner from "../common components/components/TopBanner";
 import HotelCarousel from "../common components/components/HotelCarousel";
 import BookPlane from "../components/HomePageComponents/BookPlane";
 import HotelImages from "../common components/components/HotelImages";
-import { IoCheckmark } from "react-icons/io5";
+
 
 function OurRooms() {
   const grid = "grid md:grid-cols-2 lg:grid-cols-3 mt-24";
-  const handleData = () => {};
+    const handleChildata = () => {
+    };
   return (
     <div>
       <TopBanner OurRooms={"Our Rooms"} />
-      <HotelCarousel onDataSend={handleData} grid2={grid} margin={"mb-10"} />
+      <HotelCarousel grid2={grid} margin={"mb-10"} handleChildata={handleChildata}/>
       <BookPlane />
       <div className="  mt-24 flex flex-col  md:flex-row items-center xl:pr-24 2xl:pr-48 justify-between  gap-14 2xl:gap-24">
         <div className="md:w-1/2">

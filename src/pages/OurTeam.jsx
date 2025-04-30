@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import TopBanner from "../common components/components/TopBanner";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
 
@@ -54,10 +54,10 @@ function OurTeam() {
               <img
                 src={member.image}
                 alt=""
-                className=" w-72 h-72 object-cover"
+                className="h-72 w-full object-cover object-top"
               />
               
-                <div className={`flex gap-3 text-xl text-white justify-center absolute bottom-20 w-full transition-all ease-in-out duration-500 opacity-0  ${social === index && '-translate-y-10 opacity-100'}`}>
+                <div className={`flex gap-3 text-xl text-white justify-center absolute bottom-10 w-full transition-all ease-in-out duration-500 opacity-0  ${social === index && '-translate-y-10 opacity-100'}`}>
                   <span className=" rounded-full p-2 bg-[#2C4549] ">
                     <FaFacebookF />
                   </span>

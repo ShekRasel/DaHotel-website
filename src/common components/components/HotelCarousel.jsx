@@ -1,95 +1,93 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
-function HotelCarousel({slide,onDataSend,grid,grid2,margin}) {
-    const hotelRooms = [
-        {
-          img: "hotel images/room-img05.png",
-          header: "Classic Balconly Room",
-          description:
-            "Visitors to your city need to eat. In fact, some people visit new towns specifically",
-          icon1: "icons/sve-icon1.png",
-          icon2: "icons/sve-icon2.png",
-          icon3: "icons/sve-icon3.png",
-          icon4: "icons/sve-icon4.png",
-          icon5: "icons/sve-icon5.png",
-          icon6: "icons/sve-icon6.png",
-          price: "$100/Night",
-          bookbtn: "Book Now",
-        },
-        {
-          img: "hotel images/room-img06.png",
-          header: "Classic Balconly Room",
-          description:
-            "Visitors to your city need to eat. In fact, some people visit new towns specifically",
-          icon1: "icons/sve-icon1.png",
-          icon2: "icons/sve-icon2.png",
-          icon3: "icons/sve-icon3.png",
-          icon4: "icons/sve-icon4.png",
-          icon5: "icons/sve-icon5.png",
-          icon6: "icons/sve-icon6.png",
-          price: "$100/Night",
-          bookbtn: "Book Now",
-        },
-        {
-          img: "hotel images/room-img04.png",
-          header: "Classic Balconly Room",
-          description:
-            "Visitors to your city need to eat. In fact, some people visit new towns specifically",
-          icon1: "icons/sve-icon1.png",
-          icon2: "icons/sve-icon2.png",
-          icon3: "icons/sve-icon3.png",
-          icon4: "icons/sve-icon4.png",
-          icon5: "icons/sve-icon5.png",
-          icon6: "icons/sve-icon6.png",
-          price: "$100/Night",
-          bookbtn: "Book Now",
-        },
-        {
-          img: "hotel images/room-img03.png",
-          header: "Classic Balconly Room",
-          description:
-            "Visitors to your city need to eat. In fact, some people visit new towns specifically",
-          icon1: "icons/sve-icon1.png",
-          icon2: "icons/sve-icon2.png",
-          icon3: "icons/sve-icon3.png",
-          icon4: "icons/sve-icon4.png",
-          icon5: "icons/sve-icon5.png",
-          icon6: "icons/sve-icon6.png",
-          price: "$100/Night",
-          bookbtn: "Book Now",
-        },
-        {
-          img: "hotel images/room-img02.png",
-          header: "Classic Balconly Room",
-          description:
-            "Visitors to your city need to eat. In fact, some people visit new towns specifically",
-          icon1: "icons/sve-icon1.png",
-          icon2: "icons/sve-icon2.png",
-          icon3: "icons/sve-icon3.png",
-          icon4: "icons/sve-icon4.png",
-          icon5: "icons/sve-icon5.png",
-          icon6: "icons/sve-icon6.png",
-          price: "$100/Night",
-          bookbtn: "Book Now",
-        },
-        {
-          img: "hotel images/room-img01.png",
-          header: "Classic Balconly Room",
-          description:
-            "Visitors to your city need to eat. In fact, some people visit new towns specifically",
-          icon1: "icons/sve-icon1.png",
-          icon2: "icons/sve-icon2.png",
-          icon3: "icons/sve-icon3.png",
-          icon4: "icons/sve-icon4.png",
-          icon5: "icons/sve-icon5.png",
-          icon6: "icons/sve-icon6.png",
-          price: "$100/Night",
-          bookbtn: "Book Now",
-        },
-      ];
+function HotelCarousel({grid,grid2,slide,margin,handleChildata}) {
+
+  const hotelRooms = [
+    {
+      img: "hotel images/room-img05.png",
+      header: "Ocean View Suite",
+      description: "Enjoy stunning ocean views with modern luxury and comfort.",
+      icon1: "icons/sve-icon1.png",
+      icon2: "icons/sve-icon2.png",
+      icon3: "icons/sve-icon3.png",
+      icon4: "icons/sve-icon4.png",
+      icon5: "icons/sve-icon5.png",
+      icon6: "icons/sve-icon6.png",
+      price: "$150/Night",
+      bookbtn: "Book Now",
+    },
+    {
+      img: "hotel images/room-img06.png",
+      header: "Deluxe King Room",
+      description: "Spacious room with king-size bed and city skyline views.",
+      icon1: "icons/sve-icon1.png",
+      icon2: "icons/sve-icon2.png",
+      icon3: "icons/sve-icon3.png",
+      icon4: "icons/sve-icon4.png",
+      icon5: "icons/sve-icon5.png",
+      icon6: "icons/sve-icon6.png",
+      price: "$120/Night",
+      bookbtn: "Book Now",
+    },
+    {
+      img: "hotel images/room-img04.png",
+      header: "Family Suite",
+      description: "Perfect for families, with multiple beds and extra space.",
+      icon1: "icons/sve-icon1.png",
+      icon2: "icons/sve-icon2.png",
+      icon3: "icons/sve-icon3.png",
+      icon4: "icons/sve-icon4.png",
+      icon5: "icons/sve-icon5.png",
+      icon6: "icons/sve-icon6.png",
+      price: "$180/Night",
+      bookbtn: "Book Now",
+    },
+    {
+      img: "hotel images/room-img03.png",
+      header: "Business Executive Room",
+      description: "Ideal for business travelers with workspace and fast Wi-Fi.",
+      icon1: "icons/sve-icon1.png",
+      icon2: "icons/sve-icon2.png",
+      icon3: "icons/sve-icon3.png",
+      icon4: "icons/sve-icon4.png",
+      icon5: "icons/sve-icon5.png",
+      icon6: "icons/sve-icon6.png",
+      price: "$130/Night",
+      bookbtn: "Book Now",
+    },
+    {
+      img: "hotel images/room-img02.png",
+      header: "Garden View Room",
+      description: "Relax with peaceful garden views and cozy interiors.",
+      icon1: "icons/sve-icon1.png",
+      icon2: "icons/sve-icon2.png",
+      icon3: "icons/sve-icon3.png",
+      icon4: "icons/sve-icon4.png",
+      icon5: "icons/sve-icon5.png",
+      icon6: "icons/sve-icon6.png",
+      price: "$110/Night",
+      bookbtn: "Book Now",
+    },
+    {
+      img: "hotel images/room-img01.png",
+      header: "Luxury Penthouse",
+      description: "Top-floor elegance with private balcony and VIP services.",
+      icon1: "icons/sve-icon1.png",
+      icon2: "icons/sve-icon2.png",
+      icon3: "icons/sve-icon3.png",
+      icon4: "icons/sve-icon4.png",
+      icon5: "icons/sve-icon5.png",
+      icon6: "icons/sve-icon6.png",
+      price: "$250/Night",
+      bookbtn: "Book Now",
+    },
+  ];
+
+  
 
       useEffect(() => {
-        onDataSend(hotelRooms);
+        handleChildata(hotelRooms);
       }, []);
   return (
     <div>
@@ -123,9 +121,12 @@ function HotelCarousel({slide,onDataSend,grid,grid2,margin}) {
                   <button className="px-8 py-4 w-1/2 border-r">
                     {room.price}
                   </button>
+                  <Link to={'/ourrooms'}>
+                  
                   <button className=" px-8 py-4 w-1/2 border-l">
                     {room.bookbtn}
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>

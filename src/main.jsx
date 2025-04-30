@@ -14,6 +14,7 @@ import Price from './pages/Price.jsx'
 import Faq from './pages/Faq.jsx'
 import OurServices from './pages/OurServices.jsx'
 import ServiceDetails from './pages/ServiceDetails.jsx'
+import CompoentContext from './context/CompoentContext.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -71,6 +72,8 @@ const routes = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <CompoentContext>
     <RouterProvider router={routes}/>
+    </CompoentContext>
   </StrictMode>,
 )

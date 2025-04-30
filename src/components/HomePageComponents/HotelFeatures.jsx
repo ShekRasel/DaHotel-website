@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import HotelCarousel from "../../common components/components/HotelCarousel";
 
 function HotelFeatures() {
   const [slide, setSlide] = useState(0);
   const [visible, setVisible] = useState(4);
   const [dataFromChild, setDataFromChild] = useState([]);
-  const grid = 'grid grid-flow-col  auto-cols-[100%]  md:auto-cols-[50%] xl:auto-cols-[33.33%]';
+  const grid =
+    "grid grid-flow-col  auto-cols-[100%]  md:auto-cols-[50%] xl:auto-cols-[33.33%]";
 
   const updateVisible = () => {
     if (window.innerWidth < 600) {
@@ -21,7 +22,6 @@ function HotelFeatures() {
       window.removeEventListener("resize", updateVisible);
     };
   }, []);
-
 
   const handleChildata = (data) => {
     setDataFromChild(data);
@@ -56,12 +56,16 @@ function HotelFeatures() {
         </div>
       </div>
 
-      <HotelCarousel slide={slide} onDataSend={handleChildata} grid = {grid}/>
+      <HotelCarousel
+        slide={slide}
+        handleChildata={handleChildata}
+        grid={grid}
+      />
 
       <div className="mt-10  flex flex-col items-center gap-10">
-        <div className="flex gap-4 hover:cursor-pointer">
+        <div  className="flex gap-4 hover:cursor-pointer">
           {dataFromChild.slice(0, visible).map((_, index) => (
-            <div key={index}>
+            <div key={index} className="border border-green-600">
               <div
                 className={`bg-[#2C4549]  w-1 h-[6px] rounded-md ${
                   slide === index ? "px-6" : "px-3"
