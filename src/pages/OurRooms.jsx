@@ -11,8 +11,8 @@ function OurRooms() {
   return (
     <div>
       <TopBanner OurRooms={"Our Rooms"} />
-      <HotelCarousel grid2={grid} margin={"mb-10"} handleChildata={handleChildata}/>
       <BookPlane />
+      <HotelCarousel grid2={grid} margin={"mb-10"} handleChildata={handleChildata}/>
       <div className="  mt-24 flex flex-col  md:flex-row items-center xl:pr-24 2xl:pr-48 justify-between  gap-14 2xl:gap-24">
         <div className="md:w-1/2">
           <img src="images/pexels-photo-262047.jpeg" alt="" />
