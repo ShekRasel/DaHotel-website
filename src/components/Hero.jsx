@@ -4,7 +4,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Checking from "../../common components/components/Checking";
+import Checking from "../components/Checking";
 
 function Hero() {
   const [translate, setTranslate] = useState(false);
@@ -71,7 +71,6 @@ function Hero() {
         <div className="w-full lg:w-auto px-8  absolute  left-1/2 transform -translate-x-1/2 -bottom-[550px] lg:-bottom-24">
           <Checking />
         </div>
-        
       </div>
     </div>
   );

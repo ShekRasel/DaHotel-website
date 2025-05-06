@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { IoLogoInstagram } from "react-icons/io5";
 
 function HotelImages() {
@@ -31,7 +31,11 @@ function HotelImages() {
               <IoLogoInstagram className="font-extrabold" />
             </span>
           </div>
-          <img src={rooms.room} alt="hotels room" className="h-72 w-full rounded-md" />
+          <img
+            src={rooms.room}
+            alt="hotels room"
+            className="h-72 w-full rounded-md"
+          />
         </div>
       ))}
     </div>

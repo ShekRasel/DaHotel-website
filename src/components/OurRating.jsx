@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function OurRating({ paddingBottom }) {
   const divRef = useRef(null);
@@ -29,10 +29,6 @@ function OurRating({ paddingBottom }) {
 
   useEffect(() => {
     if (isInView) {
-      let guests = 0;
-      let countries = 0;
-      let rooms = 0;
-
       const interval = setInterval(() => {
         setCounts((prev) => {
           const newCounts = {

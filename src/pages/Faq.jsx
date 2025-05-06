@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import TopBanner from "./../common components/components/TopBanner";
+import { useState } from "react";
+import TopBanner from "../components/TopBanner";
 import { MdArrowBackIos } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -20,7 +20,7 @@ function Faq() {
         </div>
         <div className="lg:w-1/2 flex flex-col gap-8 ">
           {faqs.map((faq, index) => (
-            <div className={`'border'}`}>
+            <div className={`'border'}`} key={index}>
               <div
                 className="flex w-full items-center shadow-md justify-between pl-2  font-roboto text-xl text-[#2C4549]"
                 key={index}
@@ -33,8 +33,16 @@ function Faq() {
                   {index === showFaq ? <IoIosArrowDown /> : <MdArrowBackIos />}
                 </span>
               </div>
-              <div className={` bg-slate-200 ease-in-out transition-all duration-500 overflow-hidden ${index === showFaq ? 'max-h-96': 'max-h-0'}`}>
-                <p className="py-10 px-10 font-semibold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque ea officia explicabo quo saepe blanditiis, magni recusandae aliquam voluptates facilis!</p>
+              <div
+                className={` bg-slate-200 ease-in-out transition-all duration-500 overflow-hidden ${
+                  index === showFaq ? "max-h-96" : "max-h-0"
+                }`}
+              >
+                <p className="py-10 px-10 font-semibold">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Eaque ea officia explicabo quo saepe blanditiis, magni
+                  recusandae aliquam voluptates facilis!
+                </p>
               </div>
             </div>
           ))}

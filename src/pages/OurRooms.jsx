@@ -1,18 +1,20 @@
-import TopBanner from "../common components/components/TopBanner";
-import HotelCarousel from "../common components/components/HotelCarousel";
-import BookPlane from "../components/HomePageComponents/BookPlane";
-import HotelImages from "../common components/components/HotelImages";
-
+import TopBanner from "../components/TopBanner";
+import HotelCarousel from "../components/HotelCarousel";
+import BookPlane from "../components/BookPlane";
+import HotelImages from "../components/HotelImages";
 
 function OurRooms() {
   const grid = "grid md:grid-cols-2 lg:grid-cols-3 mt-24";
-    const handleChildata = () => {
-    };
+  const handleChildata = () => {};
   return (
     <div>
       <TopBanner OurRooms={"Our Rooms"} />
       <BookPlane />
-      <HotelCarousel grid2={grid} margin={"mb-10"} handleChildata={handleChildata}/>
+      <HotelCarousel
+        grid2={grid}
+        margin={"mb-10"}
+        handleChildata={handleChildata}
+      />
       <div className="  mt-24 flex flex-col  md:flex-row items-center xl:pr-24 2xl:pr-48 justify-between  gap-14 2xl:gap-24">
         <div className="md:w-1/2">
           <img src="images/pexels-photo-262047.jpeg" alt="" />
@@ -34,7 +36,9 @@ function OurRooms() {
             ante eget.
           </p>
 
-          <button className="mt-8 bg-[#2C4549] text-white px-10 py-4 ">DISCOVER MORE</button>
+          <button className="mt-8 bg-[#2C4549] text-white px-10 py-4 ">
+            DISCOVER MORE
+          </button>
         </div>
       </div>
       <HotelImages />

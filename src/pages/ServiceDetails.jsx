@@ -1,5 +1,4 @@
-import React from "react";
-import TopBanner from "./../common components/components/TopBanner";
+import TopBanner from "../components/TopBanner";
 import { TfiArrowRight } from "react-icons/tfi";
 
 function ServiceDetails() {
@@ -96,12 +95,18 @@ function ServiceDetails() {
             nisi enim vis metus cras fusce lectus sed luctus quis Clas nisl
             blandit parturient molestie praesent nec
           </p>
-          <img
-              src="hotel images/room-img06.png"
-              alt=""
-              className="mt-4"
-            />
-            <p className="mt-8">Phasellus hac phasellus consequat malesuada veler aliquam dictumst amet a phasellus lacinia integer curabitur duis. Urna taciti nisl torquent varius libero dui. Tempus magnis libero pulvinar purus pharetra justo sem curae duis eget tempus erat ornare. Consequat litora a blandit fermentum. Quam taciti site nascetur nunc litora quis tempor metus adipiscing ac quis sodales ultrices cubilia. Arcu in penatibus vestibulum diam. Curabitur platea quam fusce molestie venenatis platea ligula in aenean gravida dolor aptent nostra luctus rutrum morbi porttitor cursus</p>
+          <img src="hotel images/room-img06.png" alt="" className="mt-4" />
+          <p className="mt-8">
+            Phasellus hac phasellus consequat malesuada veler aliquam dictumst
+            amet a phasellus lacinia integer curabitur duis. Urna taciti nisl
+            torquent varius libero dui. Tempus magnis libero pulvinar purus
+            pharetra justo sem curae duis eget tempus erat ornare. Consequat
+            litora a blandit fermentum. Quam taciti site nascetur nunc litora
+            quis tempor metus adipiscing ac quis sodales ultrices cubilia. Arcu
+            in penatibus vestibulum diam. Curabitur platea quam fusce molestie
+            venenatis platea ligula in aenean gravida dolor aptent nostra luctus
+            rutrum morbi porttitor cursus
+          </p>
         </div>
       </div>
     </div>

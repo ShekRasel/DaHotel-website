@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useCompoContext } from "../../context/CompoentContext";
+import { useCompoContext } from "../context/CompoentContext";
 
 const Checking = () => {
   const [checkIn, setCheckIn] = useState("");
@@ -7,28 +7,26 @@ const Checking = () => {
   const [guest, setGuest] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const {check,setCheck,setAvailableHotel} = useCompoContext();
- 
-  const checkHotels = ()=>{
-   
-    if(email && name){
-        setCheck(true);
-        setTimeout(()=>{
-            setAvailableHotel(true);
-            setCheckIn('');
-            setCheckOut('');
-            setGuest('');
-            setName('');
-            setEmail('');
-            setCheck(false)
-        },4000)
-    }else{
-        alert('Fill all the input fields')
+  const { check, setCheck, setAvailableHotel } = useCompoContext();
+
+  const checkHotels = () => {
+    if (email && name) {
+      setCheck(true);
+      setTimeout(() => {
+        setAvailableHotel(true);
+        setCheckIn("");
+        setCheckOut("");
+        setGuest("");
+        setName("");
+        setEmail("");
+        setCheck(false);
+      }, 4000);
+    } else {
+      alert("Fill all the input fields");
     }
-  }
+  };
   return (
     <div>
-
       <div className=" bg-white flex flex-col lg:flex-row gap-8 px-8 py-3 border shadow-2xl">
         <div className="">
           <h1 className="text-gray-400">CHECK-IN</h1>
@@ -82,7 +80,10 @@ const Checking = () => {
           />
         </div>
 
-        <button className="bg-[#2C4549] text-white px-4 py-10 text-center font-roboto tracking-wider" onClick={checkHotels}>
+        <button
+          className="bg-[#2C4549] text-white px-4 py-10 text-center font-roboto tracking-wider"
+          onClick={checkHotels}
+        >
           {check ? (
             <div className="flex items-center gap-2 text-white">
               <svg

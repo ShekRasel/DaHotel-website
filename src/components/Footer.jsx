@@ -1,4 +1,3 @@
-import React from "react";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
@@ -57,7 +56,7 @@ function Footer() {
             <h1 className="mt-4">Auto Production</h1>
             <h1 className="mt-4">Investors</h1>
             <h1 className="mt-4">News</h1>
-            <h1 className="mt-4">FAQ's</h1>
+            <h1 className="mt-4">FAQ s</h1>
             <h1 className="mt-4">Contact us</h1>
           </div>
 

@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 function Photoshot() {
-  const [hoverElement, setHoverElement] = useState('');
+  const [hoverElement, setHoverElement] = useState("");
   const [elementIndex, setElementIndex] = useState(0);
   const hoverElem = [
-    { element: "Cafe & Wine Bar", id: 'element1' },
-    { element: "Spa & Wellness", id: 'element2' },
-    { element: "Restaurant", id: 'element3' },
-    { element: "Meetings & Events", id: 'element4' },
+    { element: "Cafe & Wine Bar", id: "element1" },
+    { element: "Spa & Wellness", id: "element2" },
+    { element: "Restaurant", id: "element3" },
+    { element: "Meetings & Events", id: "element4" },
   ];
   const images = {
     element1: "images/party1.avif",
@@ -20,7 +20,6 @@ function Photoshot() {
   return (
     <div className="py-24 flex justify-center items-center bg-gray-100 lg:px-10 2xl:px-44">
       <div className="flex flex-col lg:flex-row gap-14 lg:gap-0">
-
         <div className="lg:w-3/5 order-2 lg:order-1">
           {hoverElem.map((elem, index) => (
             <div
@@ -37,7 +36,11 @@ function Photoshot() {
                   {elem.element}
                 </h1>
 
-                {elementIndex === index && <h2 className="font-roboto text-green-600">Start from $100</h2>}
+                {elementIndex === index && (
+                  <h2 className="font-roboto text-green-600">
+                    Start from $100
+                  </h2>
+                )}
               </div>
             </div>
           ))}
@@ -48,16 +51,17 @@ function Photoshot() {
             <img
               src={images[hoverElement]}
               alt=""
-              className={`transition-all duration-500 ease-in-out transform ${hoverElement ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+              className={`transition-all duration-500 ease-in-out transform ${
+                hoverElement ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              }`}
             />
             <img
               src="images/party3.avif"
               alt=""
-              className={`${hoverElement && 'hidden opacity-0'}`}
+              className={`${hoverElement && "hidden opacity-0"}`}
             />
           </div>
         </div>
-
       </div>
     </div>
   );

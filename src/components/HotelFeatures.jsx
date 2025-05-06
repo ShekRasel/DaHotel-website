@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import HotelCarousel from "../../common components/components/HotelCarousel";
+import HotelCarousel from "../components/HotelCarousel";
 
 function HotelFeatures() {
   const [slide, setSlide] = useState(0);
@@ -63,7 +63,7 @@ function HotelFeatures() {
       />
 
       <div className="mt-10  flex flex-col items-center gap-10">
-        <div  className="flex gap-4 hover:cursor-pointer">
+        <div className="flex gap-4 hover:cursor-pointer">
           {dataFromChild.slice(0, visible).map((_, index) => (
             <div key={index} className="border border-green-600">
               <div

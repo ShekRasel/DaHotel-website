@@ -1,8 +1,7 @@
-import  { useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-function HotelCarousel({grid,grid2,slide,margin,handleChildata}) {
-
+function HotelCarousel({ grid, grid2, slide, margin, handleChildata }) {
   const hotelRooms = [
     {
       img: "hotel images/room-img05.png",
@@ -46,7 +45,8 @@ function HotelCarousel({grid,grid2,slide,margin,handleChildata}) {
     {
       img: "hotel images/room-img03.png",
       header: "Business Executive Room",
-      description: "Ideal for business travelers with workspace and fast Wi-Fi.",
+      description:
+        "Ideal for business travelers with workspace and fast Wi-Fi.",
       icon1: "icons/sve-icon1.png",
       icon2: "icons/sve-icon2.png",
       icon3: "icons/sve-icon3.png",
@@ -84,17 +84,13 @@ function HotelCarousel({grid,grid2,slide,margin,handleChildata}) {
     },
   ];
 
-  
-
-      useEffect(() => {
-        handleChildata(hotelRooms);
-      }, []);
+  useEffect(() => {
+    handleChildata(hotelRooms);
+  }, []);
   return (
     <div>
-        <div className="flex justify-center border-blue-600  2xl:px-10">
-        <div
-          className={`mt-16  lg:w-5/6 overflow-hidden ${grid} ${grid2} `}
-        >
+      <div className="flex justify-center border-blue-600  2xl:px-10">
+        <div className={`mt-16  lg:w-5/6 overflow-hidden ${grid} ${grid2} `}>
           {hotelRooms.map((room, index) => (
             <div
               className={`font-roboto px-5  2xl:px-10 transition-all ease-out duration-500 ${margin}`}
@@ -121,11 +117,10 @@ function HotelCarousel({grid,grid2,slide,margin,handleChildata}) {
                   <button className="px-8 py-4 w-1/2 border-r">
                     {room.price}
                   </button>
-                  <Link to={'/ourrooms'}>
-                  
-                  <button className=" px-8 py-4 w-1/2 border-l">
-                    {room.bookbtn}
-                  </button>
+                  <Link to={"/ourrooms"}>
+                    <button className=" px-8 py-4 w-1/2 border-l">
+                      {room.bookbtn}
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -134,7 +129,7 @@ function HotelCarousel({grid,grid2,slide,margin,handleChildata}) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default HotelCarousel
+export default HotelCarousel;

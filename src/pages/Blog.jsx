@@ -1,5 +1,4 @@
-import React from "react";
-import TopBanner from "./../common components/components/TopBanner";
+import TopBanner from "../components/TopBanner";
 import { MdPeople } from "react-icons/md";
 import { PiCalendarDotsDuotone } from "react-icons/pi";
 import { BiSolidMessage } from "react-icons/bi";
@@ -46,8 +45,8 @@ function Blog() {
       <TopBanner blog={"Blog"} />
       <div className="px-4 md:px-14 lg:px-14 xl:px-28 2xl:px-64 py-24 flex flex-col lg:flex-row font-firsSans tracking-wide gap-8">
         <div className="lg:w-3/5 flex flex-col gap-10">
-          {BlogPost.map((blog) => (
-            <div className="border">
+          {BlogPost.map((blog, index) => (
+            <div className="border" key={index}>
               <img
                 src={blog.img}
                 alt="hotel image"
@@ -214,7 +213,6 @@ function Blog() {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

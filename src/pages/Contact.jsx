@@ -1,5 +1,4 @@
-import React from "react";
-import TopBanner from "../common components/components/TopBanner";
+import TopBanner from "../components/TopBanner";
 import { TfiTime } from "react-icons/tfi";
 import { RiInboxArchiveLine } from "react-icons/ri";
 import { TfiMap } from "react-icons/tfi";
@@ -26,9 +25,7 @@ function Contact() {
                 <h1 className="mt-4 font-semibold text-gray-500">
                   Monday to Friday 09:00 to 18:30
                 </h1>
-                <h1 className=" font-semibold text-gray-500">
-                  Saturday 15:30
-                </h1>
+                <h1 className=" font-semibold text-gray-500">Saturday 15:30</h1>
               </div>
             </div>
           </div>
@@ -37,7 +34,7 @@ function Contact() {
             <div className="flex gap-6 border-b pb-10 items-center">
               <div className=" rounded-full flex justify-center items-center w-20 h-20 text-4xl p-4 bg-[#2C4549] text-white ">
                 <span>
-                <RiInboxArchiveLine />
+                  <RiInboxArchiveLine />
                 </span>
               </div>
 
@@ -59,8 +56,7 @@ function Contact() {
             <div className="flex gap-6 border-b pb-10 items-center">
               <div className=" rounded-full flex justify-center items-center w-20 h-20 text-4xl p-4 bg-[#2C4549] text-white ">
                 <span>
-                <TfiMap />
-
+                  <TfiMap />
                 </span>
               </div>
 
@@ -107,9 +103,17 @@ function Contact() {
                 placeholder="Phone No."
               />
             </div>
-            <textarea name="" id="" placeholder="Write Comments" className="mt-6 outline-none w-full h-28 border border-black p-4"></textarea>
+            <textarea
+              name=""
+              id=""
+              placeholder="Write Comments"
+              className="mt-6 outline-none w-full h-28 border border-black p-4"
+            ></textarea>
 
-            <button className="text-white bg-[#2C4549] p-4 w-full mt-8 font-firsSans "> Submit Now</button>
+            <button className="text-white bg-[#2C4549] p-4 w-full mt-8 font-firsSans ">
+              {" "}
+              Submit Now
+            </button>
           </form>
         </div>
       </div>

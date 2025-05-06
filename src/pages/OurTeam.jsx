@@ -1,5 +1,5 @@
-import  { useState } from "react";
-import TopBanner from "../common components/components/TopBanner";
+import { useState } from "react";
+import TopBanner from "../components/TopBanner";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
 
 function OurTeam() {
@@ -49,26 +49,29 @@ function OurTeam() {
               className="font-roboto relative border"
               key={index}
               onMouseEnter={() => setSocial(index)}
-              onMouseLeave={()=>setSocial(null)}
+              onMouseLeave={() => setSocial(null)}
             >
               <img
                 src={member.image}
                 alt=""
                 className="h-72 w-full object-cover object-top"
               />
-              
-                <div className={`flex gap-3 text-xl text-white justify-center absolute bottom-10 w-full transition-all ease-in-out duration-500 opacity-0  ${social === index && '-translate-y-10 opacity-100'}`}>
-                  <span className=" rounded-full p-2 bg-[#2C4549] ">
-                    <FaFacebookF />
-                  </span>
-                  <span className=" rounded-full p-2 bg-[#2C4549] ">
-                    <FaInstagram />
-                  </span>
-                  <span className=" rounded-full p-2 bg-[#2C4549] ">
-                    <FaTwitter />
-                  </span>
-                </div>
-             
+
+              <div
+                className={`flex gap-3 text-xl text-white justify-center absolute bottom-10 w-full transition-all ease-in-out duration-500 opacity-0  ${
+                  social === index && "-translate-y-10 opacity-100"
+                }`}
+              >
+                <span className=" rounded-full p-2 bg-[#2C4549] ">
+                  <FaFacebookF />
+                </span>
+                <span className=" rounded-full p-2 bg-[#2C4549] ">
+                  <FaInstagram />
+                </span>
+                <span className=" rounded-full p-2 bg-[#2C4549] ">
+                  <FaTwitter />
+                </span>
+              </div>
 
               <div className="mt-7 text-[#2C4549] flex flex-col items-center">
                 <h1 className="text-2xl font-serif font-semibold">
