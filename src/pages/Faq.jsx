@@ -1,55 +1,5 @@
-import { useState } from "react";
 import TopBanner from "../components/TopBanner";
-import { MdArrowBackIos } from "react-icons/md";
-import { IoIosArrowDown } from "react-icons/io";
+import { Heading } from "../components/Design";
+import { Link } from "react-router-dom";
+export default function Faq(){return <><TopBanner title="A few helpful answers."/><section className="section container split"><div><Heading eyebrow="BEFORE YOU ARRIVE" title="Let us make it easy." text="A little planning makes for a more relaxed stay. Here are some useful things to know."/><Link className="text-link" to="/contact">Ask our team ↗</Link></div><div className="faq-list">{[["How can I make a reservation?","Browse our rooms, choose your favourite and send an enquiry to our team. They can confirm availability, rates and the next steps for your dates."],["Can I request an early check-in?","Please contact our team with your arrival time. Early check-in and late check-out depend on availability and may carry an additional charge."],["Which room is best for a family?","Our Family Suite offers extra space and multiple beds. Contact us with the number of guests and your preferences so we can help you choose."],["Where can I find cancellation details?","Cancellation conditions depend on the rate and package you choose. Please confirm these with our team before finalising your reservation."],["Can you accommodate special requests?","Let us know about accessibility needs, dietary preferences or a special occasion before your visit so our team can discuss the available options."]].map(([q,a])=><details key={q}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div></section></>;}
 
-function Faq() {
-  const [showFaq, setShowFaq] = useState(null);
-  const faqs = [
-    { head: "Breaking The Rules Using SQLite To Demo Web" },
-    { head: "Monthly Web Development Update Pragmatic Realeasing" },
-    { head: "How to use Underlined Text to imporve User Experience" },
-    { head: "Understanding CSS Layout and the block formating" },
-  ];
-  return (
-    <div>
-      <TopBanner faq="FAQ" />
-      <div className="lg:flex px-4 md:px-14 lg:px-28 2xl:px-72 mt-14 lg:mt-24 gap-8">
-        <div className="lg:w-1/2">
-          <img src="hotel images/room-img03.png" alt="room" />
-        </div>
-        <div className="lg:w-1/2 flex flex-col gap-8 ">
-          {faqs.map((faq, index) => (
-            <div className={`'border'}`} key={index}>
-              <div
-                className="flex w-full items-center shadow-md justify-between pl-2  font-roboto text-xl text-[#2C4549]"
-                key={index}
-              >
-                <h1>{faq.head}</h1>
-                <span
-                  className="text-white text-2xl p-4 pl-6 bg-[#2C4549] ease-in-out transition-all duration-500"
-                  onClick={() => setShowFaq(index === showFaq ? null : index)}
-                >
-                  {index === showFaq ? <IoIosArrowDown /> : <MdArrowBackIos />}
-                </span>
-              </div>
-              <div
-                className={` bg-slate-200 ease-in-out transition-all duration-500 overflow-hidden ${
-                  index === showFaq ? "max-h-96" : "max-h-0"
-                }`}
-              >
-                <p className="py-10 px-10 font-semibold">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Eaque ea officia explicabo quo saepe blanditiis, magni
-                  recusandae aliquam voluptates facilis!
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default Faq;

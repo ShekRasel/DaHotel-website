@@ -1,19 +1,5 @@
 import TopBanner from "../components/TopBanner";
 import FeatureSection from "../components/FeatureSection";
-import BookPlane from "../components/BookPlane";
 import Photoshot from "../components/Photoshot";
-import HotelImages from "../components/HotelImages";
-
-function OurServices() {
-  return (
-    <div>
-      <TopBanner ourService="Our Service" />
-      <FeatureSection marginT="mt-[100px]" />
-      <BookPlane />
-      <Photoshot />
-      <HotelImages />
-    </div>
-  );
-}
-
-export default OurServices;
+import { StayCTA } from "../components/Design";
+export default function OurServices(){return <><TopBanner title="Make every moment yours."/><FeatureSection/><Photoshot/><StayCTA/></>;}
